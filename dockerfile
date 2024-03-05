@@ -1,7 +1,4 @@
 
-FROM node:18-alpine
-WORKDIR /app
+FROM python:latest
 COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
-EXPOSE 3000
+CMD ["python", "./server.py"]
